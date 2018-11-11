@@ -1,0 +1,192 @@
+/* добавить псевдоселектора before after делают разделительную полосу
+и ховер. эдементы сделать сслыками типо <a> снести
+cmd D - после выделение, выделяет все схожие элементы в коде
+
+динамический величины (отступ у слова новости)
+
+БЭМ:
+-- модификатор
+
+__ (нижнее подчеркивание) для детей
+
+
+*/
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+nav {
+  display: flex;
+
+  height: 45px;
+  padding: 0 15px;
+
+  text-transform: uppercase;
+
+  color: #fff;
+  background-color: rgb(38, 38, 38);
+
+  font-family: "Proxima Nova";
+  font-size: 13px;
+  font-weight: 600;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.logo {
+  height: 21px;
+  margin-top: -4px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul:first-of-type {
+  padding-left: 150px;
+}
+
+nav ul li {
+  padding: 5px 10px;
+
+  letter-spacing: 1px;
+}
+
+
+nav ul:last-of-type {
+  align-items: center;
+}
+
+.info-pannel {
+  display: flex;
+
+  height: 45px;
+  padding: 0 15px;
+
+  color: #000;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+
+  font-family: "Proxima Nova";
+  font-size: 13px;
+  font-weight: 600;
+
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.info-pannel a {
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #999;
+}
+
+
+
+main {
+  padding-top: 8px;
+
+  background-color: #f2f2f2;
+}
+
+section {
+  min-width: 70vw;
+  max-width: 95vw;
+  height: 400px;
+  margin: 8px auto;
+}
+
+section.is-prominent {
+  border: 1px solid #ccc;
+  border-top: 4px solid #b88b58;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.card__header {
+  padding: 15px;
+
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  color: gray;
+
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card__content {
+  display: flex;
+
+  padding: 15px;
+
+  flex-flow: row wrap;
+}
+
+.card__content__item:nth-child(1),
+.card__content__list {
+  width: 50%;
+}
+
+.card__content__item {
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 30px;
+}
+
+.card__content__item h3 {
+  font-family: "PT Regal";
+  font-size: 19px;
+
+  flex:1;
+}
+
+.card__content__list {
+  display: flex;
+
+  flex-wrap: wrap;
+}
+
+.card__content__list .card__content__item {
+  width: calc(100% / 2);
+  height: 140px;
+}
+
+.card__content__list .card__content__item h3 {
+  padding-top: 5px;
+  padding-right: 25px;
+}
+
+.card__content > .card__content__item:first-of-type h3 {
+  font-size: 34px;
+}
+ /* кажется что .card__content> избыточен. и без него можно добравться ко всем .card__content__item: */
+
+.timestamp {
+  font-family: "Proxima Nova";
+  font-size: 12px;
+}
+
+.card__content__item.is-important h3 {
+  font-family: "Proxima Nova";
+  font-weight: bold;
+}
+
+section.has-3-cards{
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.card--1-of-3 {
+  width: 405px;
+}
